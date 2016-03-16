@@ -29,7 +29,7 @@
 #	-p ALL = show all partitions, Optional
 
 
-/usr/bin/iostat -Ndkx 300 2 \
+/usr/bin/iostat -Ndkx -p 300 2 \
 	| /usr/bin/tail -n+4 \
 	| /bin/grep -A 1000 Device \
 	| /usr/bin/tail -n+2 \
